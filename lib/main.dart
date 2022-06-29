@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_share_module/screens/splash_screen.dart';
 
 import 'screens/choose_screen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ChooseScreen(),
+      home: const SplashScreen(),
     );
   }
 }

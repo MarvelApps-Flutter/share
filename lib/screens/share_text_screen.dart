@@ -51,7 +51,9 @@ class _ShareTextScreenState extends State<ShareTextScreen> {
     return CustomScrollView(
       slivers: <Widget>[
       SliverPersistentHeader(
-          delegate: CustomSliverAppBarDelegate(expandedHeight: 300, isImageShare: widget.isShareImageVisible),
+          delegate: CustomSliverAppBarDelegate(
+            
+            expandedHeight: 300, isImageShare: widget.isShareImageVisible),
           pinned: true,
         ),
         SliverList(
@@ -199,7 +201,7 @@ class _ShareTextScreenState extends State<ShareTextScreen> {
                             print("share icon");
 
                               final url = 'https://www.themoviedb.org/';
-                              Share.text(StringConstants.storyline, '${StringConstants.storyline} $url', 'text/plain');
+                              Share.text(AppConstants.storyline, '${AppConstants.storyline} $url', 'text/plain');
 
                           }, icon: Icon(Icons.share , color: Colors.black54,)) : Container()
                         ],
@@ -213,7 +215,7 @@ class _ShareTextScreenState extends State<ShareTextScreen> {
                 child: Container(
                   //height: 35,
                   child: Text(
-                    StringConstants.storyline,
+                    AppConstants.storyline,
                     maxLines: 6,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
@@ -386,22 +388,30 @@ class _ShareTextScreenState extends State<ShareTextScreen> {
         onPressed: () {});
   }
 
-  SliverAppBar buildSliverAppBar() {
-    return SliverAppBar(
-      backgroundColor: Colors.blueAccent.shade700,
-      expandedHeight: 300,
-      // shape: const RoundedRectangleBorder(
-      //     borderRadius: BorderRadius.all(Radius.circular(40))),
-      flexibleSpace: FlexibleSpaceBar(
-        background: ClipRRect(
-          // borderRadius:
-          //     const BorderRadius.vertical(bottom: Radius.circular(40)),
-          child: Image.network(
-            "https://image.tmdb.org/t/p/original/e66tM5YOawXLxhDAfWkR7sxpb3h.jpg",
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-    );
-  }
+  // SliverAppBar buildSliverAppBar() {
+  //   return SliverAppBar(
+  //      leading: IconButton(
+  //       onPressed: () {
+  //         Navigator.pop(context);
+  //       },
+  //       icon: const Icon(Icons.arrow_back_ios),
+  //       iconSize: 24,
+  //       color: Colors.black,
+  //     ),
+  //     backgroundColor: Colors.blueAccent.shade700,
+  //     expandedHeight: 300,
+  //     // shape: const RoundedRectangleBorder(
+  //     //     borderRadius: BorderRadius.all(Radius.circular(40))),
+  //     flexibleSpace: FlexibleSpaceBar(
+  //       background: ClipRRect(
+  //         // borderRadius:
+  //         //     const BorderRadius.vertical(bottom: Radius.circular(40)),
+  //         child: Image.network(
+  //           "https://image.tmdb.org/t/p/original/e66tM5YOawXLxhDAfWkR7sxpb3h.jpg",
+  //           fit: BoxFit.cover,
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 }
