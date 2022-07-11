@@ -2,6 +2,9 @@
 
 A new Flutter app for demonstrating Sharing accross apps.
 
+# Demo
+<img src="https://github.com/MarvelApps-Flutter/share/blob/dev/screenshots/gif/demo.gif" height="480px"></td>
+
 # Android Screenshots
 
 <table>
